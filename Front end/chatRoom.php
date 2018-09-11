@@ -113,8 +113,6 @@
     #textBox{
         background: white;
         border-top: 1px solid red;
-        border-bottom: 1px solid red;
-        border-right: 1px solid red;
         height: 172px;
     }
     #startButton{
@@ -244,7 +242,6 @@
                     var thisTime = thisMsgObj.time;
                     var thisPrivate = thisMsgObj.private;
                     var thisReceiver = thisMsgObj.receiver;
-                    // var lengthOfMsgObj = Object.keys(thisMsgObj).length;
                     if(thisPrivate === "1" && (user_id === thisUser_id ||user_id === thisReceiver)){
                         newHTML = "<div class='bubbleContainer'><div class='privateBubbleTail'></div>" + "<div class='privateBubble'>" + "<span class='name'>"  + thisUser_id  + "</span>" + " " + thisMsg + 
                             "<span class='dt'>" + thisTime + "</span></div></div>";
@@ -301,11 +298,9 @@
             }
 
             var json = JSON.stringify(obj);
-            // console.log(json);
             
             xhr.onreadystatechange = function () {
                 if(xhr.readyState === 4 && xhr.status === 200){   
-                    console.log(xhr.responseText);
                 }
             }
             xhr.open("POST", "../Back end/writeNewMsg.php");
@@ -326,7 +321,6 @@
 
                 var json = xhr.responseText;
                 var arrOfObjs = JSON.parse(json);
-                console.log(json);
 
                 for(var i = 0; i < arrOfObjs.length; i++){
                     var thisObj = arrOfObjs[i];

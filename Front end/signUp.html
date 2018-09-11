@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign up page</title>
+<style>    
+#container{
+    text-align: center;
+    margin-top: 8em;
+}
+#title{
+    color: rgb(214, 71, 119);
+    font-size: 3em;
+}
+#instruction{
+    color: rgb(250, 3, 45);
+    margin-bottom: 2em;
+}
+#submitButton{
+    background: blue;
+    cursor: pointer;
+    width: 250px;
+    height: 26px;
+    display: inline-block;
+    color: white;
+    margin: 2em;
+    display: block;
+    margin: 2em auto;
+}
+#clickableSignUpBox{
+    position: relative;
+    top: 2em;
+}
+#clickableLogInPg{
+    color: blue;
+    cursor: pointer;
+    font-weight: 500;
+}
+.fieldName{
+    position: relative;
+    margin: 0.3em;   
+    font-size: 0.8em;
+    color: blue; 
+}
+.fieldName:nth-child(2){
+    left: -6.1em;
+}
+.fieldName:nth-child(4){
+    left: -4em;
+}
+.fieldName:nth-child(6){
+    left: -5.3em;
+}
+#signUp_msg{
+    color: red;
+    margin: 3em;
+}
+#signUp_msg #user_id{
+    font-weight: bold;
+}
+
+</style>
+</head>
+<body>
+    <div id="container">
+        <div id="title">Sign Up</div>
+        <div id="inputBox">        
+            <p id="instruction">Please insert all datas.</p>
+            <div class="fieldName">ID</div><input id="idInput" type="text" value="">
+            <div class="fieldName">PASSWORD</div><input id="pwInput" type="password">
+            <div class="fieldName">E-Mail</div><input id="emailInput" type="email">
+            <input type="button" id="submitButton" value="Submit">
+        </div>
+        <div>Go back to <a href="logIn.html" id="clickableLogInPg">Log-in page.</a></div>
+    </div>
+
+    <script>
+        var sumbitButton = document.getElementById("submitButton");
+        sumbitButton.addEventListener("click", signUp);
+        
+        function signUp(){
+            var user_id = document.getElementById("idInput").value;
+            var pw = document.getElementById("pwInput").value;
+            var eMail = document.getElementById("emailInput").value;
+            if(user_id === "" || pw === "" ||eMail === ""){
+                alert("Please insert all datas.");
+            }
+            else{
+                var obj = {
+                    user_id: user_id, 
+                    pw: pw,
+                    eMail: eMail
+                }
+
+                var json = JSON.stringify(obj);
+
+                var xhr = new XMLHttpRequest();
+                xhr.onreadystatechange = function () {
+                    if(xhr.readyState === 4 && xhr.status === 200){
+                        var result = xhr.responseText;
+                        if(result === "SIGNED_UP"){
+                            var inputBox = document.getElementById("inputBox");
+                            inputBox.innerHTML =  "<div id='signUp_msg'>" + "Welcome, <span id='user_id'>" + user_id + "</span>!<br>" 
+                                                + "Your account has been successfully signed up.</div>";
+                        }
+                        else if(result === "ID_EXIST"){
+                            alert("The ID exists. Please use a different ID.");
+                        }
+                    }
+                }
+                xhr.open("POST", "signUp.php");
+                xhr.send(json);
+            }
+        }   
+
+    </script>
+</body>
+</html>
