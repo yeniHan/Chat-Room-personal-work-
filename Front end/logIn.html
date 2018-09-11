@@ -83,7 +83,7 @@
                 if(response === "IDPW_MATCH"){ 
                     hiddneInputForID.value = id;
                     hiddenInputSubmitButton.click();
-                    // window.location.href = "/New%20folder/chatRoom2.php"; //pile path!!
+                    window.location.href = "./chatRoom.php?user_id=" + id; //pile path!!
                 }
                 else if(response === "ID_MATCH"){
                     alert("Please insert the right password.");
@@ -93,7 +93,7 @@
                 }                  
             }
         }
-        xhr.open("POST", "id_pw_check.php");
+        xhr.open("POST", "../Back end/id_pw_check.php");
         xhr.send('{"user_id":"' + id + '",' + '"pw":"' + pw + '"}'); 
     }
 

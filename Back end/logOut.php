@@ -7,7 +7,7 @@ $lastMsgId = $assArr["lastMsgId"];
 
 if( isset($json) && ( $user_id !== "") && ($lastMsgId >= 0)){
     try{
-        $dataConn = new PDO("mysql:host=localhost;dbname=mydb;", "root", "");
+        $dataConn = new PDO("mysql:host=localhost;dbname=chatroom;", "root", "");
         $sql = "UPDATE `users` SET `lastMsgId` = :lastMsgId WHERE `user_id` = :user_id";
         $sta = $dataConn -> prepare($sql);
         $sta -> execute([":lastMsgId" => $lastMsgId, ":user_id" => $user_id]);

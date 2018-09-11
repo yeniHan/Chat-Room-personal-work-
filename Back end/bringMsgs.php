@@ -5,7 +5,7 @@ $assArr = json_decode($json, true);
 $user_id = $assArr["user_id"];
 $fromLastMsgOrNot = $assArr["fromLastMsgOrNot"];
 
-$dataConn = new PDO("mysql:host=localhost;dbname=mydb;", "root", "");
+$dataConn = new PDO("mysql:host=localhost;dbname=chatroom;", "root", "");
 $sql2 = "SELECT `id`, `user_id`, `msg`, `time`, `private`, `receiver` FROM `msgs` WHERE `id` > :lastMsgId;";
 $lastMsgId = -1;
 

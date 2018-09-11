@@ -114,6 +114,8 @@
         background: white;
         border-top: 1px solid red;
         border-bottom: 1px solid red;
+        border-right: 1px solid red;
+        height: 172px;
     }
     #startButton{
         margin-top: -1.5em;
@@ -142,8 +144,8 @@
 
     }
     #msgInput{
-        width: 41em;
-        height: 6em;
+        width: 549px;
+        height: 78px;
         position: relative;
         top: 2.6em;
     }
@@ -152,6 +154,7 @@
         top: -5em;
         color: red;
         background: white;
+        width: 205px;
     }
     #msgDisplayBox{
         overflow-y: scroll;
@@ -160,8 +163,8 @@
     }
     #logOutButton{
         position: relative;
-        top: -5.5em;
-        left: 81em;
+        top: -73px;
+        left: 1124px;
         color: white;
         background: blue;
         font-weight: bold;
@@ -262,7 +265,7 @@
                 }
             }
         }
-        xhr.open("POST", "bringMsgs.php");
+        xhr.open("POST", "../Back end/bringMsgs.php");
         xhr.send('{"user_id":' + '"' + user_id + '", "fromLastMsgOrNot":' + fromLastMsgOrNot + '}');
     }
 
@@ -305,7 +308,7 @@
                     console.log(xhr.responseText);
                 }
             }
-            xhr.open("POST", "writeNewMsg.php");
+            xhr.open("POST", "../Back end/writeNewMsg.php");
             xhr.send(json);
             document.getElementById("msgInput").value = "";
         }
@@ -338,7 +341,7 @@
                 }
             }
         }
-        xhr.open("POST", "getMemberList.php");
+        xhr.open("POST", "../Back end/getMemberList.php");
         xhr.send();
         newMsg = "";
     }
@@ -366,10 +369,10 @@
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function () {
             if(xhr.readyState === 4 && xhr.status === 200){
-				window.location.href = "logIn_page_ChatRoom.html";
+				window.location.href = "logIn.html";
             }
         }
-        xhr.open("POST", "logOut.php");
+        xhr.open("POST", "../Back end/logOut.php");
         xhr.send('{"user_id":"' + user_id + '", "lastMsgId":' + lastMsgId + "}");
     }
 

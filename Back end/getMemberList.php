@@ -1,6 +1,6 @@
 <?php
 
-$dataConn = new PDO("mysql:host=localhost;dbname=mydb;", "root", "");
+$dataConn = new PDO("mysql:host=localhost;dbname=chatroom;", "root", "");
 
 $sql = "SELECT `user_id` FROM `users`;";
 
