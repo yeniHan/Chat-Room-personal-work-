@@ -1,6 +1,5 @@
 <!-- <?php
 $json = file_get_contents("php://input"); 
-// $json = '{"user_id":"happy20", "lastMsgId":10}';
 $assArr = json_decode($json, true);
 $user_id = $assArr["user_id"];
 $lastMsgId = $assArr["lastMsgId"];
