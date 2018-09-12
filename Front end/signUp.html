@@ -99,18 +99,19 @@
                 var xhr = new XMLHttpRequest();
                 xhr.onreadystatechange = function () {
                     if(xhr.readyState === 4 && xhr.status === 200){
-                        var result = xhr.responseText;
-                        if(result === "SIGNED_UP"){
+                        var response = xhr.responseText;
+                        console.log(response);
+                        if(response === "OK"){
                             var inputBox = document.getElementById("inputBox");
                             inputBox.innerHTML =  "<div id='signUp_msg'>" + "Welcome, <span id='user_id'>" + user_id + "</span>!<br>" 
                                                 + "Your account has been successfully signed up.</div>";
                         }
-                        else if(result === "ID_EXIST"){
-                            alert("The ID exists. Please use a different ID.");
+                        else if(response === "ERROR: This 'user_id' exists."){
+                            alert("This ID already exists. Please use a different ID.");
                         }
                     }
                 }
-                xhr.open("POST", "signUp.php");
+                xhr.open("POST", "../Back end/signUp.php");
                 xhr.send(json);
             }
         }   

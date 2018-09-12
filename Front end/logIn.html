@@ -53,48 +53,41 @@
     <div id="container">
         <div id="title">Log In</div>
         <p id="instruction">Please log-in first.</p>
-        <input id="idInput" type="text" placeholder="ID">
+        <input id="useridInput" type="text" placeholder="ID">
         <input id="pwInput" type="password" placeholder="PASSWORD">
         <button id="logInButton">Log In</button>
         <div id="clickableSignUpBox">Don't have an acount?<a href="/New%20folder/signUp_page_chatRoom.html" id="clickableSignUp"> Sign Up</a></div>
     </div>
-    <form id="hiddenForm" action="/New%20folder/chatRoom2.php" method="POST">
-        <input type="hidden" id="hiddneInputForID" name="user_id" value="">
-        <input id="submitButton" type="submit">
-    </form>
     
 <script>
     var logInButton = document.getElementById("logInButton");
     logInButton.addEventListener("click", checkIdAndPw);
-    var idInput = document.getElementById("idInput");
+    var useridInput = document.getElementById("useridInput");
     var pwInput = document.getElementById("pwInput");
-    var hiddneInputForID = document.getElementById("hiddneInputForID");
-    var hiddenInputSubmitButton = document.getElementById("submitButton");
 
     function checkIdAndPw(){
-        var id = idInput.value;
+        var user_id = useridInput.value;
         var pw = pwInput.value;
-        var hasID = true;
 
         var xhr = new XMLHttpRequest();        
         xhr.onreadystatechange = function () {
             if(xhr.readyState === 4 && xhr.status === 200){
                 var response = xhr.responseText;
-                if(response === "IDPW_MATCH"){ 
-                    hiddneInputForID.value = id;
-                    hiddenInputSubmitButton.click();
-                    window.location.href = "./chatRoom.php?user_id=" + id; //pile path!!
+                if(response === "OK"){ 
+                    window.location.href = "./chatRoom.php?user_id=" + user_id;
                 }
-                else if(response === "ID_MATCH"){
+                else if(response === "ERROR: PW_NOT_MATCH"){
                     alert("Please insert the right password.");
                 }
-                else if(response === "NO_MATCH"){
+                else if(response === "ERROR: NO_MATCH"){
                     alert("This ID doesn't exist. Please sign up first.");
-                }                  
+                }else{
+                    console.log(response);
+                }                 
             }
         }
-        xhr.open("POST", "../Back end/id_pw_check.php");
-        xhr.send('{"user_id":"' + id + '",' + '"pw":"' + pw + '"}'); 
+        xhr.open("POST", "../Back end/logIn.php");
+        xhr.send('{"user_id":"' + user_id + '",' + '"pw":"' + pw + '"}'); 
     }
 
 </script>  

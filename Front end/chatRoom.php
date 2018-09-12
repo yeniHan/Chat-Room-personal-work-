@@ -9,7 +9,7 @@
 <style>
 	#memberList{
         overflow-y: scroll;
-        max-height: 20.58em;
+        height: 20.58em;
     }
    .bubbleContainer{
         display: flex;
@@ -156,13 +156,13 @@
     }
     #msgDisplayBox{
         overflow-y: scroll;
-        max-height: 23.5em;
-        min-height: 23.5em;
+        height: 29.9em;
+        font-size: 0.8em;
     }
     #logOutButton{
         position: relative;
         top: -73px;
-        left: 1124px;
+        left: 1091px;
         color: white;
         background: blue;
         font-weight: bold;
@@ -180,12 +180,13 @@
     <div id="biggestContainer">
         <input id="hiddenInputForId" type="hidden" value="">
         <div id="memberListBox">
-            <p id="title">Members:</p>
-            <div id="memberList"></div>
+            <p id="title">Members</p>
+            <div id="memberList">
+            </div>
             <div id="textBox">
                 <div id="name">Private Chat</div>
                 <p id="instruction">To start a private chat, choose the person to talk with in the private mode.</p>
-                <input id="hiddenInputForPrivateFriend" type="hidden" value="">
+                <input id="hiddenInputForPrivateMSGReceiver" type="hidden" value="">
                 <div id="displaySelectedId">Friend ID:</div>
                 <button id="startButton">Start</button>
             </div>
@@ -205,8 +206,7 @@
     <input type="hidden" id="hiddenInputForFromLastMsgOrNot"  value="false">
  <script>
     var msgDisplayBox = document.getElementById("msgDisplayBox");
-    var user_id = "";
-    var lastMsgId;
+    var user_id = <?php echo $user_id;?>;
     var fromLastMsgYes = document.getElementById("yes");
     var fromLastMsgNo = document.getElementById("no");
     fromLastMsgYes.addEventListener("click", displayMsgs);
@@ -223,9 +223,6 @@
     }
 	 
     function getMsgs(){
-        var welcomeMsg = document.getElementById("welcomeMsg").innerHTML;
-        var lastIndex = (welcomeMsg.length -1);
-        user_id = welcomeMsg.substring(7, lastIndex);
 
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function () {
@@ -244,21 +241,18 @@
                     var thisReceiver = thisMsgObj.receiver;
                     if(thisPrivate === "1" && (user_id === thisUser_id ||user_id === thisReceiver)){
                         newHTML = "<div class='bubbleContainer'><div class='privateBubbleTail'></div>" + "<div class='privateBubble'>" + "<span class='name'>"  + thisUser_id  + "</span>" + " " + thisMsg + 
-                            "<span class='dt'>" + thisTime + "</span></div></div>";
+                            "<div class='dt'>" + thisTime + "</div></div></div>";
                     }
                     else if(thisPrivate === "0" && user_id === thisUser_id) {
                         newHTML = "<div class='bubbleContainer'><div class='myBubbleTail'></div>" + "<div class='myBubble'>" + "<span class='name'>"  + thisUser_id  + "</span>" + " " + thisMsg + 
-                            "<span class='dt'>" + thisTime + "</span></div></div>";
+                            "<div class='dt'>" + thisTime + "</div></div></div>";
                     }
                     else if(thisPrivate === "0" && user_id !== thisUser_id){  
                         newHTML = "<div class='bubbleContainer'><div class='othersBubbleTail'></div>" + "<div class='othersBubble'>" + "<span class='name'>"  + thisUser_id  + "</span>" + " " + thisMsg + 
-                        "<span class='dt'>" + thisTime + "</span></div></div>";
+                        "<div class='dt'>" + thisTime + "</div></div></div>";
                     }
                     msgDisplayBox.innerHTML += newHTML; 
                     msgDisplayBox.scrollTop = msgDisplayBox.scrollHeight;
-                    if(i === (arrOfObjs.length -1)){
-                        lastMsgId = thisMsgObj["id"];
-                    }
                 }
             }
         }
@@ -274,7 +268,7 @@
     function writeMsg(){
         var newMsg = document.getElementById("msgInput").value;
         var isPrivate = privateChkBox.checked;
-        var idOfPrivateFriend = hiddenInputForPrivateFriendId.value;
+        var idOfPrivateMSGReceiver = hiddenInputForPrivateMSGReceiver.value;
 
         if(newMsg === ""){
             alert("Please write a message.");
@@ -289,18 +283,21 @@
             if(isPrivate === false){
                 obj["receiver"] = null;
             }
-            else if(isPrivate === true && idOfPrivateFriend === ""){
+            else if(isPrivate === true && idOfPrivateMSGReceiver === ""){
                 alert("To start a private conversation, please click the ID of the person " + 
                 "to talk with in the private mode in the member list.");
             }
             else{ 
-                obj["receiver"] = idOfPrivateFriend;
+                obj["receiver"] = idOfPrivateMSGReceiver;
             }
 
             var json = JSON.stringify(obj);
             
             xhr.onreadystatechange = function () {
-                if(xhr.readyState === 4 && xhr.status === 200){   
+                if(xhr.readyState === 4 && xhr.status === 200){ 
+                    if(xhr.responseText !== "OK"){
+                        console.log(xhr.responseText);
+                    }  
                 }
             }
             xhr.open("POST", "../Back end/writeNewMsg.php");
@@ -340,12 +337,12 @@
         newMsg = "";
     }
     
-    var hiddenInputForPrivateFriendId = document.getElementById("hiddenInputForPrivateFriend");
+    var hiddenInputForPrivateMSGReceiver = document.getElementById("hiddenInputForPrivateMSGReceiver");
     var displaySelectedId = document.getElementById("displaySelectedId");
     
     function storeId(){
         var selectedId = this.innerHTML;
-        hiddenInputForPrivateFriendId.value = selectedId;
+        hiddenInputForPrivateMSGReceiver.value = selectedId;
         displaySelectedId.innerHTML = "Friend ID: " + selectedId;
     }
 
