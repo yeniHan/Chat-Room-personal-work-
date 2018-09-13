@@ -1,9 +1,11 @@
 <?php
+session_start();
 
 $idAndPw = file_get_contents("php://input");
 $assArr = json_decode($idAndPw, true);
 
 $user_id =  $assArr["user_id"];
+$_SESSION["user_id"] = $user_id;
 $pw = $assArr["pw"];
 
 $response = "OK";

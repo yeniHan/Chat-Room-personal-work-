@@ -28,7 +28,7 @@ if(isset($user_id) && isset($msg)){
         $sta = null;
 
     }catch(PDOException $e){
-        $response = "ERROR: Problem with our server.";
+        $response = "ERROR: Problem with the server.";
     }
 
 }

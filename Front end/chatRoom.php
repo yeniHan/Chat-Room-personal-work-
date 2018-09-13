@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,180 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Welcome to ChatRoom</title>
+    <link rel="stylesheet" type="text/css" href="CSS/chatroom.css">
 </head>
-<style>
-	#memberList{
-        overflow-y: scroll;
-        height: 20.58em;
-    }
-   .bubbleContainer{
-        display: flex;
-    }
-    .myBubble{
-        display: inline-block;
-        color: black;
-        background: #fff349;
-        width: auto;
-        min-width: 387px;
-        margin: 6px;
-        border-radius: 6px;
-        opacity: 0.7;
-        padding: 3px 3px 6px 10px;
-    }
-    .myBubbleTail{
-        display: inline-block;
-        width: 0px;
-        height: 0px;
-        opacity: 0.7;
-        position: relative;
-        top: 15px;
-        left: 6px;
-        border-top: 4px solid transparent;
-        border-right: 8px solid green;
-        border-bottom: 4px solid transparent   
-    }
-    .othersBubble{
-        display: inline-block;
-        background: #ffeaef;
-        color: black;
-        width: auto;
-        min-width: 387px;
-        margin: 4px;
-        border-radius: 6px;
-        opacity: 0.7;
-        padding: 3px 3px 6px 10px;
-    }
-    .othersBubbleTail{
-        display: inline-block;
-        width: 0px;
-        height: 0px;
-        opacity: 0.7;        
-        position: relative;
-        top: 12px;
-        left: 6px;
-        border-top: 5px solid transparent;
-        border-right: 10px solid blue;
-        border-bottom: 5px solid transparent;
-    }
-    .privateBubble{
-        display: inline-block;
-        background: #ff7373;
-        color: black;
-        width: auto;
-        min-width: 387px;
-        margin: 4px;
-        border-radius: 6px;
-        opacity: 0.7;
-        padding: 3px 3px 6px 10px;
-    }
-    .privateBubbleTail{
-        display: inline-block;
-        width: 0px;
-        height: 0px;
-        opacity: 0.7;        
-        position: relative;
-        top: 12px;
-        left: 6px;
-        border-top: 5px solid transparent;
-        border-right: 10px solid red;
-        border-bottom: 5px solid transparent;
-    }
-    .name{
-        color: blue;
-        font-weight: bold;
-        margin-right: 12px;
-    }
-    .dt{
-        color: rgb(58, 58, 58);
-        margin-left: 20px;
-        font-size: 0.6em;
-    }
-    #memberListBox{
-        background: rgb(255, 223, 228);
-        border: 1px solid red;
-        width: 16em;
-    }
-    #title{
-        background: pink;
-        margin: 0;
-        border-bottom: 1px solid red;
-    }
-    #name{
-        color: red;
-    }
-    .user_idInMemberList{
-       cursor: pointer;   
-       color: blue;      
-    }
-    #textBox{
-        background: white;
-        border-top: 1px solid red;
-        height: 172px;
-    }
-    #startButton{
-        margin-top: -1.5em;
-        margin-left: 13em;
-        margin-bottom: 1em;
-        margin-right: 1em;
-    }
-    #container{
-        border-bottom: 1px solid red;
-        border-top: 1px solid red;
-        border-right: 1px solid red;
-        width: 35em;
-    }
-    #welcomeMsg{
-        background: pink;
-        margin: 0;
-        padding: 0 1em;
-        border-bottom: 1px solid red;
-    }
-    #biggestContainer{
-        display: flex;
-        height: 33em;
-        margin: 3em 18em;
-    }
-    #msgInputContainer{
-
-    }
-    #msgInput{
-        width: 549px;
-        height: 78px;
-        position: relative;
-        top: 2.6em;
-    }
-    #sendButtonContainer{
-        position: relative;
-        top: -5em;
-        color: red;
-        background: white;
-        width: 205px;
-    }
-    #msgDisplayBox{
-        overflow-y: scroll;
-        height: 29.9em;
-        font-size: 0.8em;
-    }
-    #logOutButton{
-        position: relative;
-        top: -73px;
-        left: 1091px;
-        color: white;
-        background: blue;
-        font-weight: bold;
-    }
-    #question{
-        padding: 8em;
-        text-align: center;
-    }
-    #yes, #no{
-        cursor: pointer;
-    }
-
-</style>
 <body>
+    <button id="logOutButton">Log Out</button>
+    <input type="hidden" id="lastMsgIdInput"/>
     <div id="biggestContainer">
-        <input id="hiddenInputForId" type="hidden" value="">
         <div id="memberListBox">
             <p id="title">Members</p>
             <div id="memberList">
@@ -192,7 +27,7 @@
             </div>
         </div>
         <div id="container">
-            <p id="welcomeMsg">Hello, <?php $user_id = $_REQUEST["user_id"]; echo $user_id . "!"; ?></p>
+            <p id="welcomeMsg">Hello, <?php echo $_SESSION["user_id"] . "!"; ?></p>
             <div id="msgDisplayBox"><div id="question">Do you want to read from the last message that you read? <p><span id="yes">Yes </span>/<span id="no"> No</span></p></div></div>
             <div id="msgInputContainer">
                 <textarea id="msgInput" name="msg" row= "5" col="50" ></textarea>
@@ -202,39 +37,64 @@
             </div>
         </div>
     </div>
-    <button id="logOutButton">Log Out</button>
-    <input type="hidden" id="hiddenInputForFromLastMsgOrNot"  value="false">
  <script>
     var msgDisplayBox = document.getElementById("msgDisplayBox");
-    var user_id = <?php echo $user_id;?>;
+    var user_id = "<?php echo $_SESSION["user_id"];?>";
+    var lastMsgIdInput = document.getElementById("lastMsgIdInput");
     var fromLastMsgYes = document.getElementById("yes");
     var fromLastMsgNo = document.getElementById("no");
-    fromLastMsgYes.addEventListener("click", displayMsgs);
-    fromLastMsgNo.addEventListener("click", displayMsgs);
-    var fromLastMsgOrNot;
-	 
-    function displayMsgs(){
-        if(this.id === "yes") fromLastMsgOrNot = true;
-        else fromLastMsgOrNot = false; 
-        if(fromLastMsgOrNot !== undefined) {
-            getMsgs();
-            setInterval(getMsgs, 2000);
-        }
-    }
-	 
-    function getMsgs(){
+    fromLastMsgYes.addEventListener("click", () => {
+        getMsgs(lastMsgIdInput.value);
+        setInterval(getMsgs, 2000);
+    });
+    fromLastMsgNo.addEventListener("click", () => {
+        lastMsgIdInput.value = "";        
+        getMsgs(lastMsgIdInput.value);
+        setInterval(getMsgs, 2000);
+    });  
+    
 
+    var p = new Promise((resolve, reject)=>{
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function (){
+            if(this.readyState === 4 && this.status === 200){
+                var lastMsgId = JSON.parse(xhr.responseText)["lastMsgId"];
+                lastMsgIdInput.value = lastMsgId;
+                setTimeout(() => { resolve(lastMsgId);}, 500);                
+            }
+        }
+        xhr.open("POST", "../Back end/hasLastMsgId.php");
+        xhr.send();
+    });
+    
+    p.then(function(lastMsgId){
+        if(lastMsgId !== null){
+            document.getElementById("question").style.display = "block";
+        }else{            
+            getMsgs();
+            setInterval(()=>{
+                getMsgs();
+            }, 2000);
+        }
+    });
+    
+	 
+
+    function getMsgs (){
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function () {
+            msgDisplayBox.innerHTML = ""; 
             if(xhr.readyState === 4 && xhr.status === 200){
                 var json = xhr.responseText;
-                var arrOfObjs = JSON.parse(json);
-                msgDisplayBox.innerHTML = "";
-                              
-                for(var i = 0; i< arrOfObjs.length; i++){
+                var obj = JSON.parse(json);
+                if(obj["status"] === "OK"){
+                    let msgs_json = obj["msgs"];
+                    let msgs_obj = JSON.parse(msgs_json);
+
+                for(var i = 0; i< msgs_obj.length; i++){
 					var newHTML = "";  
-                    var thisMsgObj = arrOfObjs[i];
-                    var thisUser_id = thisMsgObj["user_id"];
+                    var thisMsgObj = msgs_obj[i];
+                    var thisUser_id = thisMsgObj["user_id"];                  
                     var thisMsg = thisMsgObj.msg;
                     var thisTime = thisMsgObj.time;
                     var thisPrivate = thisMsgObj.private;
@@ -254,12 +114,21 @@
                     msgDisplayBox.innerHTML += newHTML; 
                     msgDisplayBox.scrollTop = msgDisplayBox.scrollHeight;
                 }
+                }else{
+                    console.log(obj["message"]);
+                }
             }
         }
         xhr.open("POST", "../Back end/bringMsgs.php");
-        xhr.send('{"user_id":' + '"' + user_id + '", "fromLastMsgOrNot":' + fromLastMsgOrNot + '}');
-    }
+        var obj = {
+            lastMsgId: lastMsgIdInput.value
+        };
+        var json = JSON.stringify(obj);
+        xhr.send(json);
 
+        // setInterval( getMsgs, 2000);        
+    }
+ 
 
     var sendButton = document.getElementById("sendButton");
     sendButton.addEventListener("click", writeMsg);
@@ -360,11 +229,11 @@
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function () {
             if(xhr.readyState === 4 && xhr.status === 200){
-				window.location.href = "logIn.html";
+				window.location.href = "logIn.php";
             }
         }
         xhr.open("POST", "../Back end/logOut.php");
-        xhr.send('{"user_id":"' + user_id + '", "lastMsgId":' + lastMsgId + "}");
+        xhr.send();
     }
 
 

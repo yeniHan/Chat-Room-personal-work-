@@ -1,24 +1,29 @@
 <?php
 
-$dataConn = new PDO("mysql:host=localhost;dbname=chatroom;", "root", "");
+$json = file_get_contents("php://input"); 
+$dataObj = json_decode($json, true);
 
-$sql = "SELECT `user_id` FROM `users`;";
+$servername = "localhost";
+$dbname = "chatroom";
+$username = "root";
+$password = "";
 
-$sta = $dataConn -> prepare($sql);
+try{
+    $dataConn = new PDO("mysql:host=$servername;dbname=$dbname;", $username, $password);
 
-$sta -> execute();
+    $sql = "SELECT `user_id` FROM `users`;";
+    $sta = $dataConn -> prepare($sql);
+    $sta -> execute();
+    $obj = $sta -> fetchAll(PDO::FETCH_ASSOC);
+    echo json_encode($obj);
 
-$assArrOfassArrs = $sta -> fetchAll(PDO::FETCH_ASSOC);
+    $dataConn = null;
+    $sta = null;
 
-$dataConn = null;
-$sta = null;
-
-$json = json_encode($assArrOfassArrs);
-if($json !== "[]"){
-    echo $json;
-}else{
+}catch(PDOException $e){
     echo "Failed to get the member list.";
 }
+
 
 
 ?>

@@ -1,33 +1,49 @@
 <?php
+session_start();
+
 $json = file_get_contents("php://input");
-$assArr = json_decode($json, true);
 
-$user_id = $assArr["user_id"];
-$fromLastMsgOrNot = $assArr["fromLastMsgOrNot"];
+$dataObj = json_decode($json, true);
+$lastMsgId = $dataObj["lastMsgId"];
+$lastMsgId === ""? $lastMsgId : 0;
 
-$dataConn = new PDO("mysql:host=localhost;dbname=chatroom;", "root", "");
-$sql2 = "SELECT `id`, `user_id`, `msg`, `time`, `private`, `receiver` FROM `msgs` WHERE `id` > :lastMsgId;";
-$lastMsgId = -1;
+$user_id = $_SESSION["user_id"];
 
-if($fromLastMsgOrNot === true){
-    $sql1 = "SELECT `lastMsgId` FROM `users` WHERE `user_id` = :user_id"; 
-    $sta1 = $dataConn -> prepare($sql1);
-    $sta1 -> execute([":user_id" => $user_id]);
-    $assArr = $sta1 -> fetch(PDO::FETCH_ASSOC);
-    $lastMsgId = $assArr["lastMsgId"];
-    if($lastMsgId === null) $lastMsgId = -1;
-    else $lastMsgId = (int) $lastMsgId;
+$response = new stdClass();
+$response->status = "OK";
+$response->message = null;
+$response->msgs = null;
 
+if(isset($lastMsgId)){
+
+    $servername = "localhost";
+    $dbname = "chatroom";
+    $username = "root";
+    $password = "";
+    
+    try{
+        $dataConn = new PDO("mysql:host=$servername;dbname=$dbname;", $username, $password);
+
+        $sql = "SELECT `id`, `user_id`, `msg`, `time`, `private`, `receiver` FROM `msgs` WHERE `id` >= :lastMsgId;";
+        $sta = $dataConn -> prepare($sql);
+        $sta->bindValue(":lastMsgId", $lastMsgId);
+        $sta->execute();
+        $obj = $sta->fetchAll(PDO::FETCH_ASSOC);
+
+        $response->msgs = json_encode($obj);
+
+        $dataConn = null;
+        $sta = null;
+
+    }catch(PDOException $e){
+        $response->status = "ERROR";
+        $response->message = "Problem with the server.";    
+    }
+}else{
+    $response->status = "ERROR";    
+    $response->message = "Failed to receive all necessary data for execution.";
 }
-$sta2 = $dataConn -> prepare($sql2);
-$sta2 -> execute([":lastMsgId" => $lastMsgId]);
-$assArrOfAssArrs = $sta2 -> fetchAll(PDO::FETCH_ASSOC);
-$json = json_encode($assArrOfAssArrs);
-echo $json;
 
-$dataConn = null;
-$sta1 = null;
-$sta2 = null;
-
+echo json_encode($response);
 
 ?>
