@@ -6,9 +6,9 @@
 
 HTML, CSS, JS, PHP, MySQL, API. 
 
-<h5>[Functionalities]</h5>
+<h3>[Functionalities]</h3>
 
-**1. Signup and Login/out** </br>
+<h4>**1. Signup and Login/out** </h4>
    - signup page
     "Data varification"
     Invalid data can't be submitted.  
@@ -20,7 +20,7 @@ HTML, CSS, JS, PHP, MySQL, API.
     Case2) ID doesn't exist.
    <br/><br/>
    
-**2. Private mode Chatting** </br>
+<h4>**2. Private mode Chatting** </h4></br>
   A user can make his/her message visioble to only one person so that the user can talk <br/>
   to that another user privately.<br/>
   <br/><br/>
