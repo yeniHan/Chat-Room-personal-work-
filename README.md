@@ -8,7 +8,7 @@ HTML, CSS, JS, PHP, MySQL, API.
 
 <h3>[Functionalities]</h3>
 
-<h3>**1. Signup and Login/out** </h3>
+<h3>1. Signup and Login/out </h3>
    - signup page
     "Data varification"
     Invalid data can't be submitted.  
@@ -20,7 +20,7 @@ HTML, CSS, JS, PHP, MySQL, API.
     Case2) ID doesn't exist.
    <br/><br/>
    
-<h3>**2. Private mode Chatting** </h3>
+<h3>2. Private mode Chatting</h3>
   A user can make his/her message visioble to only one person so that the user can talk <br/>
   to that another user privately.<br/>
   <br/>
@@ -31,7 +31,7 @@ HTML, CSS, JS, PHP, MySQL, API.
   3. Click "Send" button. <br/>
   <br/>
   
-**3. Choosing to read only unread messages**</br>
+<h3>3. Choosing to read only unread messages</h3></br>
   A user can choose to read only the messages that the user hasn't read or not.<br/>
   
    
