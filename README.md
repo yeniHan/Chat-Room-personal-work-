@@ -1,7 +1,7 @@
 <h1 style=>PP02. Chatroom</h1>
 
 <h4><i>This is a chatting application</i></h4>
-<br/><br/>
+<br/>
 <h2>Techologies</h2>
 
 HTML, CSS, JS, PHP, MySQL, API. 
@@ -18,7 +18,7 @@ HTML, CSS, JS, PHP, MySQL, API.
     "Waring message"
     Case1) ID & Password aren't matched.
     Case2) ID doesn't exist.
-   <br/><br/>
+   <br/><br/><br/>
    
 <h3>2. Private mode Chatting</h3>
   A user can make his/her message visioble to only one person so that the user can talk <br/>
