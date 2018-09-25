@@ -8,7 +8,7 @@ HTML, CSS, JS, PHP, MySQL, API.
 
 <h3>[Functionalities]</h3>
 
-<h4>**1. Signup and Login/out** </h4>
+<h3>**1. Signup and Login/out** </h3>
    - signup page
     "Data varification"
     Invalid data can't be submitted.  
@@ -20,20 +20,20 @@ HTML, CSS, JS, PHP, MySQL, API.
     Case2) ID doesn't exist.
    <br/><br/>
    
-<h4>**2. Private mode Chatting** </h4></br>
+<h3>**2. Private mode Chatting** </h3>
   A user can make his/her message visioble to only one person so that the user can talk <br/>
   to that another user privately.<br/>
-  <br/><br/>
+  <br/>
   
-  **_"How to chat in the private mode"**_<br/>
+  <b>How to chat in the private mode</b><br/>
   1. A user select another user to send a "private" message in the user list on the left side.<br/>
   2. Check the "Private" check box and type the message to send. <br/>
   3. Click "Send" button. <br/>
-  <br/><br/>
+  <br/>
   
 **3. Choosing to read only unread messages**</br>
   A user can choose to read only the messages that the user hasn't read or not.<br/>
-   <br/><br/>
+  
    
   Procedure:<br/>
   1) A user click "Log out" button. <br/>
@@ -42,7 +42,7 @@ HTML, CSS, JS, PHP, MySQL, API.
     If not, all messages'll be displayed. </br>
   <br/><br/>
  
- **"Convinent way" to see how this application works..**</br>
+<b><i>Convinent way to see how this application works..</i></b></br>
  By importing the database("Back end/DB.sql") including the example dialogues & accounts</br>
  you'll be able to see how the app works more easily and faster. </br>
  </br>
@@ -55,8 +55,8 @@ HTML, CSS, JS, PHP, MySQL, API.
    - laj     & lajpw    <br/>
    <br/><br/>
    
-Convenient way to see how **_"private mode chatting"**_ works: Use **_"leonard"**_ or **_"sheldon"**_ account.<br/>
-Convenient way to see how **_"Choosing to read only unread messages"**_: Use **_"sheldon"**_ account.<br/>
+<b><i>Convenient way to see how "private mode chatting"works</i></b>: Use **_"leonard"**_ or **_"sheldon"**_ account.<br/>
+<b><i>Convenient way to see how "Choosing to read only unread messages"</i></b>: Use **_"sheldon"**_ account.<br/>
    <br/><br/><br/>
 
 
