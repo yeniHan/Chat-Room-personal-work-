@@ -1,12 +1,12 @@
 <h1 style=>PP02. Chatroom</h1>
 
-######A chatting application
+<h6>A chatting application</h6>
 
-#####[Techologies]
+<h5>[Techologies]</h5>
 
 HTML, CSS, JS, PHP, MySQL, API. 
 
-######[Functionalities]
+<h5>[Functionalities]></h5>
 
 **1. Signup and Login/out** </br>
    - signup page
