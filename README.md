@@ -1,4 +1,4 @@
-<h1>PP02. Chatroom</h1>
+<h1 style=>PP02. Chatroom</h1>
 
 A chatting application
 
@@ -8,7 +8,7 @@ HTML, CSS, JS, PHP, MySQL, API.
 
 [Functionalities]
 
-<b>1. Signup and Login/out</b>
+**1. Signup and Login/out**
    a. signup page
     "Data varification"
     Invalid data can't be submitted.  
