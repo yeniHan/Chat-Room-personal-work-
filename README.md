@@ -53,10 +53,10 @@ HTML, CSS, JS, PHP, MySQL, API.
    - laj     & lajpw    <br/>
    <br/><br/>
    
-<i>Convenient way to see how <b>"private mode chatting"</b> works</i>
-Use <b>"leonard"</b> or <b>"sheldon"</b> account.<br/>
-<i>Convenient way to see how <b>"Choosing to read only unread messages"</b>:</i>
-Use <b>"sheldon"</b>account.<br/>
+<i>Convenient way to see how <b>"private mode chatting"</b> works?</i>
+Use <b><i>"leonard"</i></b> or <b><i>"sheldon"</i></b> account.<br/>
+<i>Convenient way to see how <b>"Choosing to read only unread messages"</b>?</i>
+Use <b><i>"sheldon"</i></b>account.<br/>
    <br/><br/><br/>
 
 
