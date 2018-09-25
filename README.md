@@ -6,7 +6,7 @@
 
 HTML, CSS, JS, PHP, MySQL, API. 
 <br/><br/>
-<h2>Functionalities]</h2>
+<h2>Functionalities</h2>
 
 <h3>1. Signup and Login/out </h3>
    - signup page
@@ -32,9 +32,7 @@ HTML, CSS, JS, PHP, MySQL, API.
   <br/>
   
 <h3>3. Choosing to read only unread messages</h3></br>
-  A user can choose to read only the messages that the user hasn't read or not.<br/>
-  
-   
+  A user can choose to read only the messages that the user hasn't read or not.<br/><br/>   
    <b>Procedure:</b><br/>
   1) A user click "Log out" button. <br/>
   2) The app asks if the user wants to read only the unread messages. <br/>
@@ -42,12 +40,12 @@ HTML, CSS, JS, PHP, MySQL, API.
     If not, all messages'll be displayed. </br>
   <br/><br/>
  
-<h4><i>Convinent way to see how this application works..</i></h4></br>
+<h3><i>Convinent way to see how this application works..</i></h3></br>
  By importing the database("Back end/DB.sql") including the example dialogues & accounts</br>
  you'll be able to see how the app works more easily and faster. </br>
  </br>
  After importing the DB, you can log in with any of these accounts.</br>
-      Accounts(ID & password)<br/>
+      <b>Accounts(ID & password)</b><br/>
    - admin   & adminpw   <br/>
    - sheldon & sheldonpw <br/>
    - leonard & leonardpw <br/>
@@ -55,10 +53,10 @@ HTML, CSS, JS, PHP, MySQL, API.
    - laj     & lajpw    <br/>
    <br/><br/>
    
-<h4><i>Convenient way to see how "private mode chatting"works</i>: </h4>
-Use **_"leonard"**_ or **_"sheldon"**_ account.<br/>
-<h4><i>Convenient way to see how "Choosing to read only unread messages":</i></h4>
-Use **_"sheldon"**_ account.<br/>
+<i>Convenient way to see how <b>"private mode chatting"</b> works</i>
+Use <b>"leonard"</b> or <b>"sheldon"</b> account.<br/>
+<i>Convenient way to see how <b>"Choosing to read only unread messages"</b>:</i>
+Use <b>"sheldon"</b>account.<br/>
    <br/><br/><br/>
 
 
