@@ -44,7 +44,7 @@ HTML, CSS, JS, PHP, MySQL, API.
  By importing the database("Back end/DB.sql") including the example dialogues & accounts</br>
  you'll be able to see how the app works more easily and faster. </br>
  </br>
- After importing the DB, you can log in with any of these accounts.</br>
+ After importing the DB, you can log in with any of these accounts.</br></br>
       <b>Accounts(ID & password)</b><br/>
    - admin   & adminpw   <br/>
    - sheldon & sheldonpw <br/>
