@@ -40,7 +40,7 @@ HTML, CSS, JS, PHP, MySQL, API.
     If not, all messages'll be displayed. </br>
   <br/><br/>
  
-<h3><i>Convinent way to see how this application works..</i></h3></br>
+<h2><i>Convinent way to see how this application works..</i></h2></br>
  By importing the database("Back end/DB.sql") including the example dialogues & accounts</br>
  you'll be able to see how the app works more easily and faster. </br>
  </br>
