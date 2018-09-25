@@ -1,6 +1,6 @@
 <h1>PP02. Chatroom</h1>
 
-This is my second work which I finished during my learning process at "w-coding" academy.
+
 
 I used PHP for back-end and MySQL for databas. 
 
