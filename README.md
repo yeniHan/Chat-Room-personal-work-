@@ -1,6 +1,6 @@
 <h1 style=>PP02. Chatroom</h1>
 
-<h4><i>This is a chatting application</i></h4>
+<h4><i>This is a chatting application.</i></h4>
 <br/>
 <h2>Techologies</h2>
 
