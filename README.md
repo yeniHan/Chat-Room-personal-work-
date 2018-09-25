@@ -8,18 +8,18 @@ HTML, CSS, JS, PHP, MySQL, API.
 
 [Functionalities]
 
-<div style="font-size=16px; font-weight: bold;">1. Signup and Login/out</div>
+<b>1. Signup and Login/out</b>
    a. signup page
     "Data varification"
     Invalid data can't be submitted.  
     ex) Existing ID, email address without '@'.
-    
+    <br/>
    b. log in page
     "Waring message"
     Case1) ID & Password aren't matched.
     Case2) ID doesn't exist.
-   
-<div style="font-size=16px; font-weight: bold;">2. Private mode Chatting</div>
+   <br/>
+<b>2. Private mode Chatting</b>
   A user can make his/her message visioble to only one person so that the user can talk 
   to that another user privately.
   
