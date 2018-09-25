@@ -35,19 +35,19 @@ HTML, CSS, JS, PHP, MySQL, API.
   A user can choose to read only the messages that the user hasn't read or not.<br/>
   
    
-  Procedure:<br/>
+   <b>Procedure:</b><br/>
   1) A user click "Log out" button. <br/>
   2) The app asks if the user wants to read only the unread messages. <br/>
   1) Click Yes/No in the question, if the user clickes "Yes", only unread messages'll show.<br/>
     If not, all messages'll be displayed. </br>
   <br/><br/>
  
-<b><i>Convinent way to see how this application works..</i></b></br>
+<h4><i>Convinent way to see how this application works..</i></h4></br>
  By importing the database("Back end/DB.sql") including the example dialogues & accounts</br>
  you'll be able to see how the app works more easily and faster. </br>
  </br>
  After importing the DB, you can log in with any of these accounts.</br>
-    Accounts(ID & password)<br/>
+      Accounts(ID & password)<br/>
    - admin   & adminpw   <br/>
    - sheldon & sheldonpw <br/>
    - leonard & leonardpw <br/>
@@ -55,8 +55,10 @@ HTML, CSS, JS, PHP, MySQL, API.
    - laj     & lajpw    <br/>
    <br/><br/>
    
-<b><i>Convenient way to see how "private mode chatting"works</i></b>: Use **_"leonard"**_ or **_"sheldon"**_ account.<br/>
-<b><i>Convenient way to see how "Choosing to read only unread messages"</i></b>: Use **_"sheldon"**_ account.<br/>
+<h4><i>Convenient way to see how "private mode chatting"works</i>: </h4>
+Use **_"leonard"**_ or **_"sheldon"**_ account.<br/>
+<h4><i>Convenient way to see how "Choosing to read only unread messages":</i></h4>
+Use **_"sheldon"**_ account.<br/>
    <br/><br/><br/>
 
 
