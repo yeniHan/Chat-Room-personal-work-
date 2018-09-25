@@ -1,4 +1,4 @@
-<<Personal work 02. Chatroom>>
+#PP02. Chatroom
 
 This is my second work which I finished during my learning process at "w-coding" academy.
 
