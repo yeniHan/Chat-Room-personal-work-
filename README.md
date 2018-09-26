@@ -137,7 +137,7 @@ HTML, CSS, JS, PHP, MySQL, API.
    
 <i>Convenient way to see how <b>"private mode chatting"</b> works?</i>
 Use <b><i>"leonard"</i></b> or <b><i>"sheldon"</i></b> account.<br/>
-<i>Convenient way to see how <b>"Choosing to read only unread messages"</b>?</i>
+<i>Convenient way to see how <b>"Choosing to read only unread messages"</b> works?</i>
 Use <b><i>"sheldon"</i></b>account.<br/>
    <br/><br/><br/>
 
