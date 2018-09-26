@@ -1,0 +1,40 @@
+#container{
+    text-align: center;
+    position: relative;
+    top: 8em;
+    width: 19em;
+    margin: auto;
+}
+#title{
+    color: rgb(214, 71, 119);
+    font-size: 3em;
+    margin-bottom: 1em;
+}
+#instruction{
+    color: rgb(250, 3, 45);
+    margin-bottom: 2em;
+}
+#container input{
+    margin: 0.5em;
+}
+#logInButton{
+    background: blue;
+    cursor: pointer;
+    width: 250px;
+    height: 26px;
+    display: inline-block;
+    margin-top: 2em;
+    color: white;
+}
+#clickableSignUpBox{
+    position: relative;
+    top: 2em;
+}
+#clickableSignUp{
+    color: blue;
+    cursor: pointer;
+    font-weight: 500;
+}
+#hiddenForm{
+    visibility: hidden;
+}

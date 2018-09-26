@@ -1,0 +1,175 @@
+
+#memberList{
+    overflow-y: scroll;
+    height: 20.58em;
+}
+.bubbleContainer{
+    display: flex;
+}
+.myBubble{
+    display: inline-block;
+    color: black;
+    background: #fff349;
+    width: auto;
+    min-width: 387px;
+    margin: 6px;
+    border-radius: 6px;
+    opacity: 0.7;
+    padding: 3px 3px 6px 10px;
+}
+.myBubbleTail{
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    opacity: 0.7;
+    position: relative;
+    top: 15px;
+    left: 6px;
+    border-top: 4px solid transparent;
+    border-right: 8px solid green;
+    border-bottom: 4px solid transparent   
+}
+.othersBubble{
+    display: inline-block;
+    background: #ffeaef;
+    color: black;
+    width: auto;
+    min-width: 387px;
+    margin: 4px;
+    border-radius: 6px;
+    opacity: 0.7;
+    padding: 3px 3px 6px 10px;
+}
+.othersBubbleTail{
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    opacity: 0.7;        
+    position: relative;
+    top: 12px;
+    left: 6px;
+    border-top: 5px solid transparent;
+    border-right: 10px solid blue;
+    border-bottom: 5px solid transparent;
+}
+.privateBubble{
+    display: inline-block;
+    background: #ff7373;
+    color: black;
+    width: auto;
+    min-width: 387px;
+    margin: 4px;
+    border-radius: 6px;
+    opacity: 0.7;
+    padding: 3px 3px 6px 10px;
+}
+.privateBubbleTail{
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    opacity: 0.7;        
+    position: relative;
+    top: 12px;
+    left: 6px;
+    border-top: 5px solid transparent;
+    border-right: 10px solid red;
+    border-bottom: 5px solid transparent;
+}
+.name{
+    color: blue;
+    font-weight: bold;
+    margin-right: 12px;
+}
+.dt{
+    color: rgb(58, 58, 58);
+    margin-left: 20px;
+    font-size: 0.6em;
+}
+#memberListBox{
+    background: rgb(255, 223, 228);
+    border: 1px solid red;
+    width: 16em;
+}
+#title{
+    background: pink;
+    margin: 0;
+    border-bottom: 1px solid red;
+}
+#name{
+    color: red;
+}
+.user_idInMemberList{
+   cursor: pointer;   
+   color: blue;      
+}
+#textBox{
+    background: white;
+    border-top: 1px solid red;
+    height: 172px;
+}
+#startButton{
+    margin-top: -1.5em;
+    margin-left: 206px;
+    margin-bottom: 1em;
+    margin-right: 1em;
+}
+#container{
+    border-bottom: 1px solid red;
+    border-top: 1px solid red;
+    border-right: 1px solid red;
+    width: 35em;
+}
+#welcomeMsg{
+    background: pink;
+    margin: 0;
+    padding: 0 1em;
+    border-bottom: 1px solid red;
+    border-right: 1px solid red;
+}
+#biggestContainer{
+    display: flex;
+    height: 33em;
+    margin: 3em 18em;
+}
+#msgInputContainer{
+
+}
+#msgInput{
+    width: 549px;
+    height: 78px;
+    position: relative;
+    top: 2.6em;
+}
+#sendButtonContainer{
+    position: relative;
+    top: -5em;
+    left: 4px;
+    color: red;
+    background: white;
+    width: 205px;
+}
+#msgDisplayBox{
+    overflow-y: scroll;
+    height: 29.9em;
+    font-size: 0.8em;
+    width: 556px;
+}
+
+#question{
+    display: none;
+}
+
+#logOutButton{
+    position: relative;
+    top: 36px;
+    left: 1038px;
+    color: blue;
+    font-weight: bold;
+}
+#question{
+    padding: 8em;
+    text-align: center;
+}
+#yes, #no{
+    cursor: pointer;
+}
