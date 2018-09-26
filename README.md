@@ -33,7 +33,14 @@ HTML, CSS, JS, PHP, MySQL, API.
   3. Click "Send" button. <br/>
   <br/>
   
-<h3>3. Choosing to read only unread messages</h3></br>
+<h3>3. Differentiating messages</h3> <br/>
+    According to whose message it is, messages are displayed differently.  
+    - The user's message: "Yellow" box
+    - Other's messages: "Pink" box
+    - Messages of another user with whom the user is tallking in the private mode: "Red" box
+ <br/> <br/>
+  
+<h3>4. Choosing to read only unread messages</h3></br>
   A user can choose to read only the messages that the user hasn't read or not.<br/><br/>   
    <b>Procedure:</b><br/>
   1) A user click "Log out" button. <br/>
