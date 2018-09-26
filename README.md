@@ -142,4 +142,4 @@ Use <b><i>"sheldon"</i></b>account.<br/>
    <br/><br/><br/>
 
 
-PS. The used dialogue is the part of the script of the season 01 episode 03 of "The Big Bang Theory".
+PS. The used dialogue is a part of the script of the season 01 episode 03 of "The Big Bang Theory".
