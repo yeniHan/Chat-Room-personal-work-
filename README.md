@@ -64,7 +64,7 @@ HTML, CSS, JS, PHP, MySQL, API.
 <i><b>"private mode chatting"</b>기능을 살펴보시기 위해서는</i>
 Use <b><i>"leonard"</i></b> or <b><i>"sheldon"</i></b> account를 이용하세요.<br/>
 <i><b>"Choosing to read only unread messages"</b>기능을 살펴보시기 위해서는</i>
-Use <b><i>"sheldon"</i></b>account를 이용하세요.<br/>
+<b><i>"sheldon"</i></b>account를 이용하세요.<br/>
    <br/><br/><br/>
 
 
