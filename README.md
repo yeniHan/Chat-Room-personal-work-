@@ -12,13 +12,13 @@ HTML, CSS, JS, PHP, MySQL, API.
 <h2>기능 설명</h2>
 
 <h3>1. 회원가입, 로그인/아웃 </h3>
-   - 회원가입
-    "데이터 유효성 검사"
+   - 회원가입<br/>
+    "데이터 유효성 검사"<br/>
     기존에 존재하는 ID 혹은 유효하지 않은 email 주소등, 유효하지 않은 데이터로 회원가입을 허용되지 않음.  
     <br/>
-   - 로그인 페이지
-    "해당되는 로그인 실패 이유를 통보"
-    Case1) ID & 비밀번호가 일치하지 않음
+   - 로그인 페이지<br/>
+    "해당되는 로그인 실패 이유를 통보"<br/>
+    Case1) ID & 비밀번호가 일치하지 않음<br/>
     Case2) ID가 존재하지 않음
    <br/><br/><br/>
    
@@ -83,15 +83,15 @@ HTML, CSS, JS, PHP, MySQL, API.
 <h2>Functionalities</h2>
 
 <h3>1. Signup and Login/out </h3>
-   - signup page
-    "Data varification"
-    Invalid data can't be submitted.  
+   - signup page<br/>
+    "Data varification"<br/>
+    Invalid data can't be submitted.  <br/>
     ex) Existing ID, email address without '@'.
     <br/>
-   - log in page
-    "Waring message"
-    Case1) ID & Password aren't matched.
-    Case2) ID doesn't exist.
+   - log in page<br/>
+    "Waring message"<br/>
+    Case1) ID & Password aren't matched.<br/>
+    Case2) ID doesn't exist.<br/>
    <br/><br/><br/>
    
 <h3>2. Private mode Chatting</h3>
