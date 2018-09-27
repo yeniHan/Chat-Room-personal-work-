@@ -25,11 +25,11 @@ HTML, CSS, JS, PHP, MySQL, API.
 <h3>2. Private mode 채팅</h3>
    User가 private mode로 대화할 경우, 본인과 receiver만 해당 대화 내용을 읽을 수 있습니다. <br/>
   <br/>
-  <b>과정 설명</b><br/>
+  <b>과정 설명</b><br/><br/>
   1. User가 private mode로 대화할 다른 유저를 채팅방 왼쪽의 User 리스트에서 선택합니다.<br/>
   2. "Private" check box에 체크를 하고 보낼 메세지를 입력합니다.<br/>
   3. "Send" 버튼을 클릭하여 메세지를 보냅니다. <br/>
-  <br/>
+  <br/><br/>
   
 <h3>3. 메세지 구별하기</h3> <br/>
     메세지의 전송자가 누구인가에 따라 메세지들이 구별되어 보여집니다.  <br/>
@@ -91,7 +91,7 @@ HTML, CSS, JS, PHP, MySQL, API.
     "Waring message"<br/><br/>
     Case1) ID & Password aren't matched.<br/>
     Case2) ID doesn't exist.<br/>
-   <br/><br/><br/>
+   <br/><br/>
    
 <h3>2. Private mode Chatting</h3>
   A user can make his/her message visioble to only one person so that the user can talk <br/>
