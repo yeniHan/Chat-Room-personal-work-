@@ -83,13 +83,13 @@ HTML, CSS, JS, PHP, MySQL, API.
 <h2>Functionalities</h2>
 
 <h3>1. Signup and Login/out </h3>
-   - signup page<br/>
-    "Data varification"<br/>
+   - signup page<br/><br/>
+    "Data varification"<br/><br/>
     Invalid data can't be submitted.  <br/>
     ex) Existing ID, email address without '@'.
-    <br/>
-   - log in page<br/>
-    "Waring message"<br/>
+    <br/><br/>
+   - log in page<br/><br/>
+    "Waring message"<br/><br/>
     Case1) ID & Password aren't matched.<br/>
     Case2) ID doesn't exist.<br/>
    <br/><br/><br/>
