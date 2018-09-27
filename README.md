@@ -31,8 +31,8 @@ HTML, CSS, JS, PHP, MySQL, API.
   3. "Send" 버튼을 클릭하여 메세지를 보냅니다. <br/>
   <br/><br/>
   
-<h3>3. 메세지 구별하기</h3> <br/>
-    메세지의 전송자가 누구인가에 따라 메세지들이 구별되어 보여집니다.  <br/>
+<h3>3. 메세지 구별하기</h3> 
+    메세지의 전송자가 누구인가에 따라 메세지들이 구별되어 보여집니다.  <br/><br/>
     - 본인의 메세지: "Yellow" box<br/>
     - 타인의 메세지: "Pink" box<br/>
     - "Private mode"로 보내진 메세지: "Red" box
@@ -104,8 +104,8 @@ HTML, CSS, JS, PHP, MySQL, API.
   3. Click "Send" button. <br/>
   <br/>
   
-<h3>3. Differentiating messages</h3> <br/>
-    According to who is the receiver of each message, messages are displayed differently.  <br/>
+<h3>3. Differentiating messages</h3>
+    According to who is the receiver of each message, messages are displayed differently. <br/><br/>
     - The user's message: "Yellow" box<br/>
     - Other's messages: "Pink" box<br/>
     - Messages written in the private mode: "Red" box
