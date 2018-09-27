@@ -12,11 +12,11 @@ HTML, CSS, JS, PHP, MySQL, API.
 <h2>기능 설명</h2>
 
 <h3>1. 회원가입, 로그인/아웃 </h3>
-   - 회원가입<br/><br/>
+   <b>회원가입</b><br/><br/>
     "데이터 유효성 검사"<br/><br/>
     기존에 존재하는 ID 혹은 유효하지 않은 email 주소등, 유효하지 않은 데이터로 회원가입을 허용되지 않음.  
     <br/><br/>
-   - 로그인 페이지<br/><br/>
+   <b>로그인 페이지</b><br/><br/>
     "해당되는 로그인 실패 이유를 통보"<br/><br/>
     Case1) ID & 비밀번호가 일치하지 않음<br/>
     Case2) ID가 존재하지 않음
@@ -25,7 +25,6 @@ HTML, CSS, JS, PHP, MySQL, API.
 <h3>2. Private mode 채팅</h3>
    User가 private mode로 대화할 경우, 본인과 receiver만 해당 대화 내용을 읽을 수 있습니다. <br/>
   <br/>
-  
   <b>과정 설명</b><br/>
   1. User가 private mode로 대화할 다른 유저를 채팅방 왼쪽의 User 리스트에서 선택합니다.<br/>
   2. "Private" check box에 체크를 하고 보낼 메세지를 입력합니다.<br/>
@@ -83,12 +82,12 @@ HTML, CSS, JS, PHP, MySQL, API.
 <h2>Functionalities</h2>
 
 <h3>1. Signup and Login/out </h3>
-   - signup page<br/><br/>
+    <b>Sign up</b><br/><br/>
     "Data varification"<br/><br/>
     Invalid data can't be submitted.  <br/>
     ex) Existing ID, email address without '@'.
     <br/><br/>
-   - log in page<br/><br/>
+   <b>Log in</b><br/><br/>
     "Waring message"<br/><br/>
     Case1) ID & Password aren't matched.<br/>
     Case2) ID doesn't exist.<br/>
