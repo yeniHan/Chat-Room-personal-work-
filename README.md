@@ -1,7 +1,7 @@
 <h1 style=>PP02. Chatroom</h1>
 <div>
-    <img src="sign-up.png" width="600px" /> 
-    <img src="log-in.png" width="600px"/>	
+    <img src="sign-up.png" width="400px" /> 
+    <img src="log-in.png" width="400px"/>	
 </div>
 <div align="center">
     <img src="chatting-page.png" width="800px"/> 
