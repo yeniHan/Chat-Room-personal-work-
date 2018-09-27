@@ -41,7 +41,7 @@ HTML, CSS, JS, PHP, MySQL, API.
 <h3>4. 읽지 않은 메세지만 보기</h3>
  User가 로그아웃을 할때, app은 마지막으로 읽은 메세지에 대한 정보를 기록함으로써, <br/>   
  User는 다음 방문시, 새로운 메세지만을 볼 것인지를 선택할 수 있습니다.<br/><br/>   
-   <b>과정 설명:</b><br/>
+   <b>과정 설명:</b><br/><br/>
   1) App을 나가기 위해, "Log out"버튼을 클릭합니다. <br/>
   2) App은 오직 "새로운" 메세지만 읽을 것인지를 묻습니다. <br/>
   1) User가 "Yes"를 클릭하면 새로운 메세지들만 보여지고, <br/>
@@ -114,7 +114,7 @@ HTML, CSS, JS, PHP, MySQL, API.
 <h3>4. Choosing to read only unread messages</h3>
   When a user logs out, the app restore the data about the last message. <br/>
   So, the user can choose to read only the messages that the user hasn't read or not.<br/><br/>   
-   <b>Procedure:</b><br/>
+   <b>Procedure:</b><br/><br/>
   1) A user click "Log out" button. <br/>
   2) The app asks if the user wants to read only the unread messages. <br/>
   1) Click Yes/No in the question, if the user clickes "Yes", only unread messages'll show.<br/>
