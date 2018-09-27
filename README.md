@@ -36,9 +36,9 @@ HTML, CSS, JS, PHP, MySQL, API.
     - 본인의 메세지: "Yellow" box<br/>
     - 타인의 메세지: "Pink" box<br/>
     - "Private mode"로 보내진 메세지: "Red" box
- <br/> <br/>
+ <br/> <br/><br/>
   
-<h3>4. 읽지 않은 메세지만 보기</h3></br>
+<h3>4. 읽지 않은 메세지만 보기</h3>
  User가 로그아웃을 할때, app은 마지막으로 읽은 메세지에 대한 정보를 기록함으로써, <br/>   
  User는 다음 방문시, 새로운 메세지만을 볼 것인지를 선택할 수 있습니다.<br/><br/>   
    <b>과정 설명:</b><br/>
@@ -61,9 +61,9 @@ HTML, CSS, JS, PHP, MySQL, API.
    <br/><br/>
    
 <i><b>"private mode chatting"</b>기능을 살펴보시기 위해서는</i>
-Use <b><i>"leonard"</i></b> or <b><i>"sheldon"</i></b> account를 이용하세요.<br/>
+Use <b><i>leonard</i></b> or <b><i>sheldon</i></b> account를 이용하세요.<br/>
 <i><b>"Choosing to read only unread messages"</b>기능을 살펴보시기 위해서는</i>
-<b><i>"sheldon"</i></b>account를 이용하세요.<br/>
+<b><i>sheldon</i></b>account를 이용하세요.<br/>
    <br/><br/><br/>
 
 
@@ -109,9 +109,9 @@ HTML, CSS, JS, PHP, MySQL, API.
     - The user's message: "Yellow" box<br/>
     - Other's messages: "Pink" box<br/>
     - Messages written in the private mode: "Red" box
- <br/> <br/>
+ <br/><br/><br/>
   
-<h3>4. Choosing to read only unread messages</h3></br>
+<h3>4. Choosing to read only unread messages</h3>
   When a user logs out, the app restore the data about the last message. <br/>
   So, the user can choose to read only the messages that the user hasn't read or not.<br/><br/>   
    <b>Procedure:</b><br/>
@@ -135,9 +135,9 @@ HTML, CSS, JS, PHP, MySQL, API.
    <br/><br/>
    
 <i>Convenient way to see how <b>"private mode chatting"</b> works?</i>
-Use <b><i>"leonard"</i></b> or <b><i>"sheldon"</i></b> account.<br/>
+Use <b><i>leonard</i></b> or <b><i>sheldon</i></b> account.<br/>
 <i>Convenient way to see how <b>"Choosing to read only unread messages"</b> works?</i>
-Use <b><i>"sheldon"</i></b>account.<br/>
+Use <b><i>sheldon</i></b>account.<br/>
    <br/><br/><br/>
 
 
