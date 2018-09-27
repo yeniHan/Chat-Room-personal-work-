@@ -61,9 +61,9 @@ HTML, CSS, JS, PHP, MySQL, API.
    <br/><br/>
    
 <i><b>"private mode chatting"</b>기능을 살펴보시기 위해서는</i>
-Use <b><i>leonard</i></b> or <b><i>sheldon</i></b> account를 이용하세요.<br/>
+Use <b><i>leonard</i></b> 또는 <b><i>sheldon</i></b>의 account 이용하세요.<br/>
 <i><b>"Choosing to read only unread messages"</b>기능을 살펴보시기 위해서는</i>
-<b><i>sheldon</i></b>account를 이용하세요.<br/>
+<b><i>sheldon</i></b>의 account를 이용하세요.<br/>
    <br/><br/><br/>
 
 
@@ -135,9 +135,9 @@ HTML, CSS, JS, PHP, MySQL, API.
    <br/><br/>
    
 <i>Convenient way to see how <b>"private mode chatting"</b> works?</i>
-Use <b><i>leonard</i></b> or <b><i>sheldon</i></b> account.<br/>
+Use <b><i>leonard</i></b>'s or <b><i>sheldon</i></b>'s account.<br/>
 <i>Convenient way to see how <b>"Choosing to read only unread messages"</b> works?</i>
-Use <b><i>sheldon</i></b>account.<br/>
+Use <b><i>sheldon</i></b>'s account.<br/>
    <br/><br/><br/>
 
 
