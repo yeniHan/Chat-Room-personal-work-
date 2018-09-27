@@ -60,10 +60,8 @@ HTML, CSS, JS, PHP, MySQL, API.
    - laj     & lajpw    <br/>
    <br/><br/>
    
-<i><b>"private mode chatting"</b>기능을 살펴보시기 위해서는</i><br/>
-<b><i>leonard</i></b> 또는 <b><i>sheldon</i></b>의 account를 이용하세요.<br/>
-<i><b>"Choosing to read only unread messages"</b>기능을 살펴보시기 위해서는</i><br/>
-<b><i>sheldon</i></b>의 account를 이용하세요.<br/>
+<i><b>"private mode chatting"</b>기능을 살펴보시기 위해서는  <b>leonard</b> 또는 <b>sheldon</b>의 account를 이용하세요.<br/>
+<b>"Choosing to read only unread messages"</b>기능을 살펴보시기 위해서는  <b>sheldon</b>의 account를 이용하세요.<br/></i>
 <br/><br/><br/>
 
 
@@ -134,11 +132,9 @@ HTML, CSS, JS, PHP, MySQL, API.
    - laj     & lajpw    <br/>
    <br/><br/>
    
-<i>Convenient way to see how <b>"private mode chatting"</b> works?</i><br/>
-Use <b><i>leonard</i></b>'s or <b><i>sheldon</i></b>'s account.<br/><br/><br/>
-<i>Convenient way to see how <b>"Choosing to read only unread messages"</b> works?</i><br/>
-Use <b><i>sheldon</i></b>'s account.<br/>
-   <br/><br/><br/>
+<i>Convenient way to see how <b>"private mode chatting"</b> works?  Use <b>leonard</b>'s or <b>sheldon</b>'s account.<br/>
+Convenient way to see how <b>"Choosing to read only unread messages"</b> works?  Use <b>sheldon</b>'s account.</i>
+<br/><br/><br/>
 
 
 PS. The used dialogue is a part of the script of the season 01 episode 03 of "The Big Bang Theory".
