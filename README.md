@@ -13,7 +13,7 @@
 <br/>
 <h2>사용 기술</h2>
 
-HTML, CSS, JS, PHP, MySQL, API. 
+HTML, CSS, JS, PHP, MySQL, SESSION, API. 
 <br/><br/>
 <h2>기능 설명</h2>
 
