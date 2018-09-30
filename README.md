@@ -81,7 +81,7 @@ PS. 예시 dialogue는 "The Big Bang Theory"의 시즌1 에피스드3의 스크�
 <br/>
 <h2>Techologies</h2>
 
-HTML, CSS, JS, PHP, MySQL, API. 
+HTML, CSS, JS, PHP, MySQL, API, hashing
 <br/><br/>
 <h2>Functionalities</h2>
 
